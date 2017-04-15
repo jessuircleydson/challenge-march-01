@@ -18,8 +18,8 @@ const [
           let cHours   = document.getElementById('hours');
 
           setInterval(() => {
-            (refreshMinutes() == 0) ? cHours.innerHTML   = refreshHours()   : void(0);
-            (refreshSeconds() == 0) ? cMinutes.innerHTML = refreshMinutes() : void(0);
+            if(refreshMinutes() == 0) cHours.innerHTML =  refreshHours();
+            if(refreshSeconds() == 0) cMinutes.innerHTML = refreshMinutes();
             cSeconds.innerHTML = refreshSeconds();
           }, 1000);
         },
